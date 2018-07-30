@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:with field='msg' type='si.cat.client.Messages' />
+	<ui:style>
+	
+	</ui:style>
+	<b:FluidContainer>
+
+		<b:Modal ui:field="promptModal" backdrop="STATIC" keyboard="true"
+			animation="true">
+			<b:HelpBlock ui:field="promptMessage" />
+			<b:TextBox ui:field="promptValue" width="97%" placeholder="UID..." />
+			<b:HelpBlock ui:field="promptHelpMessage" />
+			<b:ModalFooter>
+				<b:Button type="SUCCESS" ui:field="promptOkButton">
+					<ui:text from='{msg.ok}' />
+				</b:Button>
+				<b:Button type="SUCCESS" ui:field="promptCancelButton">
+					<ui:text from='{msg.cancel}' />
+				</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+
+		<b:Modal ui:field="infoModal" title="" backdrop="STATIC"
+			keyboard="true" animation="true">
+			<b:FluidContainer>
+				<b:FluidRow>
+					<b:Column size="1">
+						<b:Image ui:field="infoImage" />
+					</b:Column>
+					<b:Column size="11">
+						<b:HelpBlock ui:field="infoMessage" />
+					</b:Column>
+				</b:FluidRow>
+			</b:FluidContainer>
+			<b:ModalFooter>
+				<b:Button type="SUCCESS" ui:field="infoCloseButton">
+					<ui:text from='{msg.close}' />
+				</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+
+	</b:FluidContainer>
+</ui:UiBinder>
+	

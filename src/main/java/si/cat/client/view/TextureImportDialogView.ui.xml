@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui" xmlns:p="urn:import:thothbot.parallax.core.client"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+
+		<b:Modal ui:field="textureDialog" title="Add texture"
+			backdrop="STATIC" keyboard="true" animation="true">
+
+			<b:WellForm>
+				<b:ControlLabel>Enter the texture alias</b:ControlLabel>
+				<b:TextBox ui:field="textureAliasBox" text="texture0" />
+			</b:WellForm>
+
+			<b:WellForm>
+				<b:ControlLabel>Then select a local file</b:ControlLabel>
+				<b:FileUpload ui:field="loadLocalHandler" name="textureUpload" />
+			</b:WellForm>
+
+			<b:WellForm>
+				<b:ControlLabel>or enter a valid URL (and press enter)</b:ControlLabel>
+				<b:TextBox ui:field="loadUrlBox" placeholder="texture url..." />
+			</b:WellForm>
+
+			<b:Thumbnails>
+				<b:Thumbnail size="4">
+					<b:Image ui:field="previewImage" />
+				</b:Thumbnail>
+			</b:Thumbnails>
+
+			<b:ModalFooter>
+				<b:Button ui:field="okHandler">Ok</b:Button>
+				<b:Button ui:field="cancelHandler">Cancel</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+
+	</g:HTMLPanel>
+</ui:UiBinder>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:p="urn:import:thothbot.parallax.core.client"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		<b:WellForm>
+			<b:ControlLabel>
+				<b:Label type="INFO">Ambiental light color</b:Label>
+			</b:ControlLabel>
+			<b:TextBox ui:field="ambientLightColor" />
+
+			<b:ControlLabel>
+				<b:Label type="INFO">Directional light color</b:Label>
+			</b:ControlLabel>
+			<b:TextBox ui:field="directionalLightColor" />
+
+			<b:ControlLabel>
+				<b:Label type="INFO">Directional light position</b:Label>
+			</b:ControlLabel>
+			<g:HorizontalPanel>
+				<b:TextBox width="50px"
+					ui:field="directionalLightPositionX" />
+				<b:TextBox width="50px"
+					ui:field="directionalLightPositionY" />
+				<b:TextBox width="50px"
+					ui:field="directionalLightPositionZ" />
+			</g:HorizontalPanel>
+		</b:WellForm>
+	</g:HTMLPanel>
+</ui:UiBinder>
+

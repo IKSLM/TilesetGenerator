@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:p="urn:import:thothbot.parallax.core.client"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<b:FluidContainer height="100%">
+		<b:FluidRow>
+			<b:PageHeader />
+		</b:FluidRow>
+		<b:FluidRow>
+			<b:Column size="2">
+
+				<b:TabPanel tabPosition="above" ui:field="tabPanel">
+
+					<b:TabLink text="Project" dataTarget="projectTab"
+						visible="true" createTabPane="false">
+					</b:TabLink>
+					<b:TabPane href="projectTab" ui:field="projectTab"
+						createTabLink="false" />
+
+					<b:TabLink text="Textures" dataTarget="texturesTab"
+						visible="true" createTabPane="false">
+					</b:TabLink>
+					<b:TabPane href="texturesTab" ui:field="texturesTab"
+						createTabLink="false" />
+
+					<b:TabLink text="Tiles" dataTarget="tilesTab"
+						createTabPane="false">
+					</b:TabLink>
+					<b:TabPane href="tilesTab" ui:field="tilesTab"
+						createTabLink="false" />
+
+					<b:TabLink text="Tiled" dataTarget="tiledTab"
+						createTabPane="false" ui:field="tiledTabLink">
+					</b:TabLink>
+					<b:TabPane href="tiledTab" ui:field="tiledTab"
+						createTabLink="false" />
+
+					<b:TabLink text="Settings" dataTarget="settingsTab"
+						createTabPane="false">
+					</b:TabLink>
+					<b:TabPane href="settingsTab" ui:field="settingsTab"
+						createTabLink="false" />
+
+				</b:TabPanel>
+
+				<!-- <b:Accordion ui:field="eastAccordion" /> -->
+			</b:Column>
+			<!-- <b:Column size="2"> -->
+			<!-- <b:Accordion ui:field="westAccordion" /> -->
+			<!-- </b:Column> -->
+			<!-- Rendering panel size intentionally set to POT size. -->
+			<b:Column size="8" height="512px" width="1024px">
+				<p:RenderingPanel ui:field="renderingPanel"></p:RenderingPanel>
+			</b:Column>
+		</b:FluidRow>
+	</b:FluidContainer>
+</ui:UiBinder>
+
+

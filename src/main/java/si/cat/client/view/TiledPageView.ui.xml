@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:p="urn:import:thothbot.parallax.core.client"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		<b:WellForm>
+			<b:ControlLabel>
+				<b:Label type="INFO">Map tile size (px)</b:Label>
+			</b:ControlLabel>
+			<g:HorizontalPanel>
+				<b:TextBox width="50px" ui:field="mapTileWidth"></b:TextBox>
+				<b:TextBox width="50px" ui:field="mapTileHeight"></b:TextBox>
+			</g:HorizontalPanel>
+			<b:ControlLabel>
+				<b:Label type="INFO">Tileset tile size (px)</b:Label>
+			</b:ControlLabel>
+			<g:HorizontalPanel>
+				<b:TextBox width="50px" ui:field="tilesetTileWidth"></b:TextBox>
+				<b:TextBox width="50px" ui:field="tilesetTileHeight"></b:TextBox>
+			</g:HorizontalPanel>
+			<b:ControlLabel>
+				<b:Label type="INFO">Selected indices</b:Label>
+			</b:ControlLabel>
+			<g:HorizontalPanel>
+				<b:TextBox  ui:field="selectedIndices"></b:TextBox>
+			</g:HorizontalPanel>
+			<b:ButtonToolbar>
+				<b:Button ui:field="downloadTexture" type="SUCCESS"
+					icon="DOWNLOAD" title="Download tileset" />
+				<b:Button ui:field="downloadTsx" type="SUCCESS"
+					icon="DOWNLOAD" title="Download TSX (Tiled tileset file)" />
+				<b:Button ui:field="downloadBoth" type="SUCCESS"
+					icon="DOWNLOAD_ALT" title="Download both" />
+			</b:ButtonToolbar>
+		</b:WellForm>
+	</g:HTMLPanel>
+</ui:UiBinder>
+

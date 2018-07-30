@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:p="urn:import:thothbot.parallax.core.client"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		<b:WellForm ui:field="tilesForm">
+			<b:ControlLabel>
+				<b:Label type="INFO">Tiles</b:Label>
+			</b:ControlLabel>
+			<b:ListBox multipleSelect="true" ui:field="tileList"
+				height="100px"></b:ListBox>
+			<b:ButtonToolbar>
+				<b:Button ui:field="addTileHandler" type="SUCCESS"
+					title="Add tile" icon="PLUS" />
+				<b:Button ui:field="mergeTilesHandler" type="SUCCESS"
+					title="Merge tiles" icon="ASTERISK" />
+				<b:Button ui:field="removeTileHandler" type="DANGER"
+					title="Remove tile" icon="REMOVE" />
+				<b:Button ui:field="clearSelectionHandler" type="INFO"
+					title="Clear selection" icon="ADJUST" />
+				<!-- Sorting does not seem like a good idea. -->
+				<b:Button ui:field="sortTilesHandler" type="WARNING"
+					title="Sort by height, then by alias" icon="SORT_BY_ATTRIBUTES"
+					visible="false" />
+			</b:ButtonToolbar>
+		</b:WellForm>
+	</g:HTMLPanel>
+</ui:UiBinder>
+

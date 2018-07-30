@@ -1,0 +1,126 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:p="urn:import:thothbot.parallax.core.client"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel ui:field="tileEditorPanel">
+		<!-- <b:PageHeader></b:PageHeader> -->
+		<g:HorizontalPanel>
+			<g:VerticalPanel>
+				<b:ControlLabel>
+					<b:Label type="INFO">Size (px)</b:Label>
+				</b:ControlLabel>
+				<g:HorizontalPanel>
+					<b:TextBox ui:field="tileSize" width="50px" />
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">Size w, h, d (%)</b:Label>
+		</b:ControlLabel>
+		<g:HorizontalPanel>
+			<g:VerticalPanel>
+				<b:TextBox ui:field="tileWidth" width="50px" />
+				<g:HorizontalPanel>
+					<b:RadioButton name="w" ui:field="widthAlignLeft" />
+					<b:RadioButton name="w" ui:field="widthAlignCenter" />
+					<b:RadioButton name="w" ui:field="widthAlignRight" />
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+			<g:VerticalPanel>
+				<b:TextBox ui:field="tileHeight" width="50px" />
+				<g:HorizontalPanel>
+					<b:RadioButton name="h" ui:field="heightAlignBottom" />
+					<b:RadioButton name="h" ui:field="heightAlignCenter" />
+					<b:RadioButton name="h" ui:field="heightAlignTop" />
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+			<g:VerticalPanel>
+				<b:TextBox ui:field="tileDepth" width="50px" />
+				<g:HorizontalPanel>
+					<b:RadioButton name="d" ui:field="depthAlignFront" />
+					<b:RadioButton name="d" ui:field="depthAlignCenter" />
+					<b:RadioButton name="d" ui:field="depthAlignBack" />
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">Offset x, y, z (%)</b:Label>
+		</b:ControlLabel>
+		<g:HorizontalPanel>
+			<b:TextBox width="50px" ui:field="offsetX"></b:TextBox>
+			<b:TextBox width="50px" ui:field="offsetY"></b:TextBox>
+			<b:TextBox width="50px" ui:field="offsetZ"></b:TextBox>
+		</g:HorizontalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">All sides texture</b:Label>
+		</b:ControlLabel>
+		<g:HorizontalPanel>
+			<b:ListBox ui:field="allSidesTexture" width="140px" />
+			<b:Button type="INVERSE" icon="ARROW_DOWN"
+				ui:field="allSidesApplyTexture" title="Apply to all sides" />
+			<b:Button type="INVERSE" icon="ANCHOR" ui:field="allSidesUV"
+				title="Show UV editor" />
+		</g:HorizontalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">Top</b:Label>
+		</b:ControlLabel>
+		<g:VerticalPanel>
+			<g:HorizontalPanel>
+				<b:ListBox ui:field="topTexture" width="140px" />
+				<b:Button type="INVERSE" icon="ANCHOR" ui:field="topUV"
+					title="Show UV editor" />
+				<b:Label type="SUCCESS">diffuse</b:Label>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<b:ListBox ui:field="topMask" width="140px" />
+				<b:Button type="INVERSE" icon="ANCHOR" ui:field="topMaskUV"
+					title="Show UV editor" />
+				<b:Label type="SUCCESS">light map</b:Label>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">Left</b:Label>
+		</b:ControlLabel>
+		<g:VerticalPanel>
+			<g:HorizontalPanel>
+				<b:ListBox ui:field="leftTexture" width="140px" />
+				<b:Button type="INVERSE" icon="ANCHOR" ui:field="leftUV"
+					title="Show UV editor" />
+				<b:Label type="SUCCESS">diffuse</b:Label>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<b:ListBox ui:field="leftMask" width="140px" />
+				<b:Button type="INVERSE" icon="ANCHOR"
+					ui:field="leftMaskUV" title="Show UV editor" />
+				<b:Label type="SUCCESS">light map</b:Label>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">Right</b:Label>
+		</b:ControlLabel>
+		<g:VerticalPanel>
+			<g:HorizontalPanel>
+				<b:ListBox ui:field="rightTexture" width="140px" />
+				<b:Button type="INVERSE" icon="ANCHOR" ui:field="rightUV"
+					title="Show UV editor" />
+				<b:Label type="SUCCESS">diffuse</b:Label>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<b:ListBox ui:field="rightMask" width="140px" />
+				<b:Button type="INVERSE" icon="ANCHOR"
+					ui:field="rightMaskUV" title="Show UV editor" />
+				<b:Label type="SUCCESS">light map</b:Label>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<b:ControlLabel>
+			<b:Label type="INFO">UV scaling</b:Label>
+		</b:ControlLabel>
+		<b:CheckBox ui:field="uvScaling" width="50px" />
+		<b:ControlLabel>
+			<b:Label type="INFO">Billboard</b:Label>
+		</b:ControlLabel>
+		<b:CheckBox ui:field="billboard" width="50px" />
+	</g:HTMLPanel>
+</ui:UiBinder>
+
